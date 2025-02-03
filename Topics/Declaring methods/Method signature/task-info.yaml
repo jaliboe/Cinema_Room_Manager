@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: int abs(int)
+  - text: int abs
+  - text: abs(int)
+  - text: abs
+files:
+  - name: src/Task.java
+    visible: true
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10984#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 02 Feb 2025 18:17:16 UTC"
+record: -1
+selected_options:
+  - 2
+local_check: false

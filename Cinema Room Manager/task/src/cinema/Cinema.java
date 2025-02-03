@@ -1,50 +1,85 @@
 package cinema;
+import org.w3c.dom.ranges.Range;
+
+import java.awt.font.NumericShaper;
 import java.util.Scanner;
 
 public class Cinema {
 
     public static void main(String[] args) {
-        System.out.println("Cinema:");
-        for (int i = 0; i < 8; i++){
-            for (int j = 0; j < 9; j++){
-                if (i == 0){
-                    if (j == 0){
-                        System.out.print("  ");
-                    } else {
-                        System.out.print(j + " ");
-                    }
-                } else if (j == 0){
-                    if (i > 0){
-                        System.out.print(i + " ");
-                    }
-                } else {
-                    System.out.print("S ");
-                }
-            }
-            System.out.print("\n");
-        }
         Scanner sc1 = new Scanner(System.in);
         System.out.print("Enter the number of rows:\n> ");
-        double row = sc1.nextInt();
+        int row = sc1.nextInt();
+        System.out.print("Enter the number of seats in each row\n> ");
+        int col = sc1.nextInt();
 
-        System.out.print("Enter the number of seats in each row:\n> ");
-        double seatsInRow = sc1.nextInt();
-        sc1.close();
+        char[][] seats = new char[row][col];
 
-        double seatsTotal = row * seatsInRow;
-        double totalIncome = 0;
-
-
-        if (seatsTotal <= 60){
-            totalIncome = seatsTotal * 10;
-        } else if (row % 2 == 0){
-            totalIncome = ((row / 2) * seatsInRow) * 10;
-            totalIncome += ((row / 2) * seatsInRow) * 8;
-        } else if (row % 2 != 0){
-            totalIncome = ((row / 2 - 0.5) * seatsInRow) * 10;
-            totalIncome += ((row / 2 + 0.5) * seatsInRow) * 8;
+        for (int i = 0; i < seats.length; i++){
+            for (int j = 0; j < seats[i].length; j++) {
+                seats[i][j] = 'S';
+            }
         }
 
-        System.out.print("Total income:\n$" + totalIncome);
+        System.out.println("Cinema:");
+
+        System.out.print("  ");
+        for (int i = 1; i < col + 1; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < seats.length; i++) {
+            System.out.print(i + 1 + " ");
+            for (int j = 0; j < seats[i].length; j++) {
+                System.out.print(seats[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        System.out.print("Enter a row number:\n> ");
+        int rowSelected = sc1.nextInt();
+        System.out.print(("Enter a seat number in that row:\n> "));
+        int colSelected = sc1.nextInt();
+
+        seats[(rowSelected - 1)][(colSelected - 1)] = 'B';
+
+        int ticketPrice = 0;
+        int seatsTotal = row * col;
+
+        if (seatsTotal <= 60){
+            ticketPrice = 10;
+        } else if (row % 2 == 0){
+            if (rowSelected <= 5){
+                ticketPrice = 10;
+            } else if (rowSelected >= 6){
+                ticketPrice = 8;
+            }
+        } else if (row % 2 != 0){
+            if (rowSelected <= 4){
+                ticketPrice = 10;
+            } else if (rowSelected >= 5){
+                ticketPrice = 8;
+            }
+        }
+
+        System.out.print("Ticket price: $" + ticketPrice + "\n");
+
+        System.out.println("Cinema:");
+
+        System.out.print("  ");
+        for (int i = 1; i < col + 1; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < seats.length; i++) {
+            System.out.print(i + 1 + " ");
+            for (int j = 0; j < seats[i].length; j++) {
+                System.out.print(seats[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }

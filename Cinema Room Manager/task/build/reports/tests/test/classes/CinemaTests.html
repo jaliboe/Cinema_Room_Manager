@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.067s</div>
+<div class="counter">0.083s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">0.067s</td>
+<td class="success">0.083s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,6 +89,10 @@
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
+Enter the number of rows:
+&gt; &gt; 7
+Enter the number of seats in each row
+&gt; &gt; 8
 Cinema:
   1 2 3 4 5 6 7 8 
 1 S S S S S S S S 
@@ -98,97 +102,179 @@ Cinema:
 5 S S S S S S S S 
 6 S S S S S S S S 
 7 S S S S S S S S 
-Enter the number of rows:
+
+Enter a row number:
+&gt; &gt; 2
+Enter a seat number in that row:
 &gt; &gt; 4
-Enter the number of seats in each row:
-&gt; &gt; 5
-Total income:
+Ticket price: $10
+Cinema:
+  1 2 3 4 5 6 7 8 
+1 S S S S S S S S 
+2 S S S B S S S S 
+3 S S S S S S S S 
+4 S S S S S S S S 
+5 S S S S S S S S 
+6 S S S S S S S S 
+7 S S S S S S S S 
 ?[1;31m
 Start test 2?[0m
-Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
-Enter the number of rows:
-&gt; &gt; 8
-Enter the number of seats in each row:
-&gt; &gt; 9
-Total income:
-Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
-Enter the number of rows:
-&gt; &gt; 9
-Enter the number of seats in each row:
-&gt; &gt; 7
-Total income:
-Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
 Enter the number of rows:
 &gt; &gt; 7
-Enter the number of seats in each row:
+Enter the number of seats in each row
+&gt; &gt; 8
+Cinema:
+  1 2 3 4 5 6 7 8 
+1 S S S S S S S S 
+2 S S S S S S S S 
+3 S S S S S S S S 
+4 S S S S S S S S 
+5 S S S S S S S S 
+6 S S S S S S S S 
+7 S S S S S S S S 
+
+Enter a row number:
+&gt; &gt; 4
+Enter a seat number in that row:
+&gt; &gt; 1
+Ticket price: $10
+Cinema:
+  1 2 3 4 5 6 7 8 
+1 S S S S S S S S 
+2 S S S S S S S S 
+3 S S S S S S S S 
+4 B S S S S S S S 
+5 S S S S S S S S 
+6 S S S S S S S S 
+7 S S S S S S S S 
+Enter the number of rows:
 &gt; &gt; 9
-Total income:
+Enter the number of seats in each row
+&gt; &gt; 9
 Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
-Enter the number of rows:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
+
+Enter a row number:
 &gt; &gt; 1
-Enter the number of seats in each row:
+Enter a seat number in that row:
 &gt; &gt; 1
-Total income:
+Ticket price: $10
 Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
+  1 2 3 4 5 6 7 8 9 
+1 B S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
 Enter the number of rows:
-&gt; &gt; 3
-Enter the number of seats in each row:
-&gt; &gt; 3
-Total income:
+&gt; &gt; 9
+Enter the number of seats in each row
+&gt; &gt; 9
 Cinema:
-  1 2 3 4 5 6 7 8 
-1 S S S S S S S S 
-2 S S S S S S S S 
-3 S S S S S S S S 
-4 S S S S S S S S 
-5 S S S S S S S S 
-6 S S S S S S S S 
-7 S S S S S S S S 
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
+
+Enter a row number:
+&gt; &gt; 7
+Enter a seat number in that row:
+&gt; &gt; 8
+Ticket price: $8
+Cinema:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S B S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
 Enter the number of rows:
-&gt; &gt; 8
-Enter the number of seats in each row:
-&gt; &gt; 8
-Total income:
+&gt; &gt; 9
+Enter the number of seats in each row
+&gt; &gt; 9
+Cinema:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
+
+Enter a row number:
+&gt; &gt; 5
+Enter a seat number in that row:
+&gt; &gt; 5
+Ticket price: $8
+Cinema:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S B S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
+Enter the number of rows:
+&gt; &gt; 9
+Enter the number of seats in each row
+&gt; &gt; 9
+Cinema:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S S S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
+
+Enter a row number:
+&gt; &gt; 4
+Enter a seat number in that row:
+&gt; &gt; 5
+Ticket price: $10
+Cinema:
+  1 2 3 4 5 6 7 8 9 
+1 S S S S S S S S S 
+2 S S S S S S S S S 
+3 S S S S S S S S S 
+4 S S S S B S S S S 
+5 S S S S S S S S S 
+6 S S S S S S S S S 
+7 S S S S S S S S S 
+8 S S S S S S S S S 
+9 S S S S S S S S S 
 </pre>
 </span>
 </div>
@@ -200,7 +286,7 @@ Total income:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 07.01.2025, 01:13:00</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 01.02.2025, 20:05:14</p>
 </div>
 </div>
 </body>

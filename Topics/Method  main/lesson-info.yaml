@@ -1,0 +1,8 @@
+custom_name: Method "main"
+content:
+  - Theory
+  - Select all correct statements
+  - Fixing errors in main
+  - "Creating a 'Hello, World!' program from scrambled code"
+  - Calculating factorial of a given number
+  - Invoking a greeting method within another method
