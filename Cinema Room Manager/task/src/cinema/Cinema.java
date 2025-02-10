@@ -15,71 +15,78 @@ public class Cinema {
 
         char[][] seats = new char[row][col];
 
-        for (int i = 0; i < seats.length; i++){
+        boolean run = true;
+
+        for (int i = 0; i < seats.length; i++) {
             for (int j = 0; j < seats[i].length; j++) {
                 seats[i][j] = 'S';
             }
         }
 
-        System.out.println("Cinema:");
-
-        System.out.print("  ");
-        for (int i = 1; i < col + 1; i++) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        for (int i = 0; i < seats.length; i++) {
-            System.out.print(i + 1 + " ");
-            for (int j = 0; j < seats[i].length; j++) {
-                System.out.print(seats[i][j] + " ");
-            }
+        while (run) {
+            System.out.println("1. Show the seats");
+            System.out.println("2. Buy a ticket");
+            System.out.println("0. Exit");
+            System.out.print("> ");
+            int menuChoice = sc1.nextInt();
             System.out.println();
-        }
-        System.out.println();
 
-        System.out.print("Enter a row number:\n> ");
-        int rowSelected = sc1.nextInt();
-        System.out.print(("Enter a seat number in that row:\n> "));
-        int colSelected = sc1.nextInt();
+            switch (menuChoice) {
+                case 1:
+                    System.out.println("Cinema:");
 
-        seats[(rowSelected - 1)][(colSelected - 1)] = 'B';
+                    System.out.print("  ");
+                    for (int i = 1; i < col + 1; i++) {
+                        System.out.print(i + " ");
+                    }
+                    System.out.println();
 
-        int ticketPrice = 0;
-        int seatsTotal = row * col;
+                    for (int i = 0; i < seats.length; i++) {
+                        System.out.print(i + 1 + " ");
+                        for (int j = 0; j < seats[i].length; j++) {
+                            System.out.print(seats[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+                    System.out.println();
+                    break;
+                case 2:
+                    System.out.print("Enter a row number:\n> ");
+                    int rowSelected = sc1.nextInt();
+                    System.out.print(("Enter a seat number in that row:\n> "));
+                    int colSelected = sc1.nextInt();
 
-        if (seatsTotal <= 60){
-            ticketPrice = 10;
-        } else if (row % 2 == 0){
-            if (rowSelected <= 5){
-                ticketPrice = 10;
-            } else if (rowSelected >= 6){
-                ticketPrice = 8;
+                    seats[(rowSelected - 1)][(colSelected - 1)] = 'B';
+
+                    int ticketPrice = 0;
+                    int seatsTotal = row * col;
+
+                    if (seatsTotal <= 60) {
+                        ticketPrice = 10;
+                    } else if (row % 2 == 0) {
+                        if (rowSelected <= 5) {
+                            ticketPrice = 10;
+                        } else if (rowSelected >= 6) {
+                            ticketPrice = 8;
+                        }
+                    } else if (row % 2 != 0) {
+                        if (rowSelected <= 4) {
+                            ticketPrice = 10;
+                        } else if (rowSelected >= 5) {
+                            ticketPrice = 8;
+                        }
+                    }
+
+                    System.out.print("Ticket price: $" + ticketPrice + "\n");
+
+                    System.out.println();
+                    break;
+                case 0:
+                    run = false;
+                    break;
+                default:
+                    System.out.println("Wrong input!");
             }
-        } else if (row % 2 != 0){
-            if (rowSelected <= 4){
-                ticketPrice = 10;
-            } else if (rowSelected >= 5){
-                ticketPrice = 8;
-            }
-        }
-
-        System.out.print("Ticket price: $" + ticketPrice + "\n");
-
-        System.out.println("Cinema:");
-
-        System.out.print("  ");
-        for (int i = 1; i < col + 1; i++) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        for (int i = 0; i < seats.length; i++) {
-            System.out.print(i + 1 + " ");
-            for (int j = 0; j < seats[i].length; j++) {
-                System.out.print(seats[i][j] + " ");
-            }
-            System.out.println();
         }
     }
 }
