@@ -25,6 +25,11 @@
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Mean calculator" />
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Sum, multiplication, and division of two integers" />
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Adding values" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Filling the blanks to print array elements in a method" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Get first and last elements" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/How to invoke the method" />
+            <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Theory" />
             <option value="$PROJECT_DIR$/Topics/Basic literals  numbers, strings and characters/Apple supply" />
             <option value="$PROJECT_DIR$/Topics/Basic literals  numbers, strings and characters/Find an invalid literal" />
             <option value="$PROJECT_DIR$/Topics/Basic literals  numbers, strings and characters/Find the correct ones" />
@@ -164,6 +169,13 @@
             <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Rectangle whisperer's precision quest" />
             <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Theory" />
             <option value="$PROJECT_DIR$/Topics/Reading user's input with Scanner/Understanding System.in" />
+            <option value="$PROJECT_DIR$/Topics/String/Check burgs" />
+            <option value="$PROJECT_DIR$/Topics/String/Comparing strings" />
+            <option value="$PROJECT_DIR$/Topics/String/Comparing strings ignoring whitespaces" />
+            <option value="$PROJECT_DIR$/Topics/String/Extracting a character" />
+            <option value="$PROJECT_DIR$/Topics/String/Extracting a specific character from a greeting message" />
+            <option value="$PROJECT_DIR$/Topics/String/Finding string expressions" />
+            <option value="$PROJECT_DIR$/Topics/String/Theory" />
             <option value="$PROJECT_DIR$/Topics/Type casting/Casting long to byte with intermediate int" />
             <option value="$PROJECT_DIR$/Topics/Type casting/Converting and printing double values as integers" />
             <option value="$PROJECT_DIR$/Topics/Type casting/Penny for your euros" />
