@@ -29,3 +29,5 @@ content:
   - Arrays as parameters
   - String
   - Errors in programs
+  - NullPointerException
+  - Formatted output

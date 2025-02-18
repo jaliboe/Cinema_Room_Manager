@@ -1,0 +1,6 @@
+content:
+  - Theory
+  - Unknown input
+  - Catching null pointer exception in code
+  - Return empty string when argument is null
+  - When NPE cannot occur

@@ -105,6 +105,12 @@
             <option value="$PROJECT_DIR$/Topics/For loop/Maximum element divisible by four" />
             <option value="$PROJECT_DIR$/Topics/For loop/The sum of integers from a to b" />
             <option value="$PROJECT_DIR$/Topics/For loop/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Creating a personalized greeting based on name and height" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Formatting Long Sentences" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Integer Formatting" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/String Format Precision" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/The battle for Mathematics" />
+            <option value="$PROJECT_DIR$/Topics/Formatted output/Theory" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/A quadratic equation" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Calculator with four methods" />
             <option value="$PROJECT_DIR$/Topics/Functional decomposition/Checking divisibility and printing appropriate strings" />
@@ -159,6 +165,11 @@
             <option value="$PROJECT_DIR$/Topics/Multiple conditions  switch/Harry Potter" />
             <option value="$PROJECT_DIR$/Topics/Multiple conditions  switch/Removing breaks" />
             <option value="$PROJECT_DIR$/Topics/Multiple conditions  switch/Theory" />
+            <option value="$PROJECT_DIR$/Topics/NullPointerException/Catching null pointer exception in code" />
+            <option value="$PROJECT_DIR$/Topics/NullPointerException/Return empty string when argument is null" />
+            <option value="$PROJECT_DIR$/Topics/NullPointerException/Theory" />
+            <option value="$PROJECT_DIR$/Topics/NullPointerException/Unknown input" />
+            <option value="$PROJECT_DIR$/Topics/NullPointerException/When NPE cannot occur" />
             <option value="$PROJECT_DIR$/Topics/One-line condition with ternary operator/Categorize integer as positive, negative, or zero" />
             <option value="$PROJECT_DIR$/Topics/One-line condition with ternary operator/Correct general syntax" />
             <option value="$PROJECT_DIR$/Topics/One-line condition with ternary operator/Find the maximum of two numbers" />
