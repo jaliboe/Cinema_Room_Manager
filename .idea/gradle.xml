@@ -25,6 +25,12 @@
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Mean calculator" />
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Sum, multiplication, and division of two integers" />
             <option value="$PROJECT_DIR$/Topics/Arithmetic operations/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Determine an exception" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Is the code fully protected" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Name an exception" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Out of bounds" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Array exceptions/Where an exception occurs" />
             <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Adding values" />
             <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Filling the blanks to print array elements in a method" />
             <option value="$PROJECT_DIR$/Topics/Arrays as parameters/Get first and last elements" />
