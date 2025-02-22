@@ -19,18 +19,20 @@ public class Cinema {
 
         boolean run = true;
         int ticketsSold = 0;
-        int seatsTotal = 0;
+        int seatsTotal = row * col;
         float soldPercentage = 0.0f;
         float currentIncome = 0.0f;
-        float totalIncome = 0.0f;
         int rowSelected = 0;
         int colSelected = 0;
+        int ticketPrice = 0;
 
         for (int i = 0; i < seats.length; i++) {
             for (int j = 0; j < seats[i].length; j++) {
                 seats[i][j] = 'S';
             }
         }
+
+        float totalIncome = calcTotalIncome(seats);
 
         while (run) {
             System.out.println("1. Show the seats");
@@ -61,60 +63,62 @@ public class Cinema {
                     System.out.println();
                     break;
                 case 2:
-                    System.out.print("Enter a row number:\n> ");
-                    rowSelected = sc1.nextInt();
-                    System.out.print(("Enter a seat number in that row:\n> "));
-                    colSelected = sc1.nextInt();
+                    boolean validInput = false;
+                    while (!validInput) {
+                        System.out.println("Enter a row number:");
+                        System.out.print("> ");
+                        rowSelected = sc1.nextInt();
 
-                    seats[(rowSelected - 1)][(colSelected - 1)] = 'B';
-
-                    int ticketPrice = 0;
-                    seatsTotal = row * col;
-
-                    if (seatsTotal <= 60) {
-                        ticketPrice = 10;
-                    } else if (row % 2 == 0) {
-                        if (rowSelected <= 5) {
-                            ticketPrice = 10;
-                        } else if (rowSelected >= 6) {
-                            ticketPrice = 8;
+                        if (rowSelected < 1 || rowSelected > row) {
+                            System.out.println("Wrong input!");
+                            System.out.println();
+                            continue;
                         }
-                    } else if (row % 2 != 0) {
-                        if (rowSelected <= 4) {
-                            ticketPrice = 10;
-                        } else if (rowSelected >= 5) {
-                            ticketPrice = 8;
+
+                        System.out.println("Enter a seat number in that row:");
+                        System.out.print("> ");
+                        colSelected = sc1.nextInt();
+
+                        if (colSelected < 1 || colSelected > col) {
+                            System.out.println("Wrong input!");
+                            System.out.println();
+                            continue;
                         }
+
+                        if (seats[rowSelected - 1][colSelected - 1] == 'B') {
+                            System.out.println();
+                            System.out.println("That ticket has already been purchased");
+                            System.out.println();
+                            continue;
+                        }
+
+                        validInput = true;
                     }
-
-                    ticketsSold++;
-                    soldPercentage = 100 / seatsTotal;
-                    currentIncome += ticketPrice;
-
-                    System.out.print("Ticket price: $" + ticketPrice + "\n");
-
-                    System.out.println();
-                    break;
-                case 3:
-
-                    for (int i = 0; i < 0; i++) {
+                        seats[(rowSelected - 1)][(colSelected - 1)] = 'B';
                         if (seatsTotal <= 60) {
-                            totalIncome += 10 * seats[i].length;
+                            ticketPrice = 10;
                         } else if (row % 2 == 0) {
-                            if (i <= 5) {
-                                totalIncome = 10 * seats[i].length;
-                            } else if (i >= 6) {
-                                totalIncome = 8 * seats[i].length;
+                            if (rowSelected <= 5) {
+                                ticketPrice = 10;
+                            } else if (rowSelected >= 6) {
+                                ticketPrice = 8;
                             }
                         } else if (row % 2 != 0) {
-                            if (i <= 4) {
-                                totalIncome = 10 * seats[i].length;
-                            } else if (i >= 5) {
-                                totalIncome = 8 * seats[i].length;
+                            if (rowSelected <= 4) {
+                                ticketPrice = 10;
+                            } else if (rowSelected >= 5) {
+                                ticketPrice = 8;
                             }
                         }
-                    }
 
+                        ticketsSold++;
+                        soldPercentage = ((float) ticketsSold / seatsTotal) * 100;
+                        currentIncome += ticketPrice;
+
+                        System.out.print("Ticket price: $" + ticketPrice + "\n");
+                        System.out.println();
+                    break;
+                case 3:
                     System.out.printf("Number of purchased tickets: %d", ticketsSold);
                     System.out.printf("%nPercentage: %.2f%%", soldPercentage);
                     System.out.printf("%nCurrent Income: $%.0f", currentIncome);
@@ -131,5 +135,33 @@ public class Cinema {
                     System.out.println("Wrong input!");
             }
         }
+    }
+
+    public static float calcTotalIncome(char[][] seats) {
+
+        int row = seats.length;
+        int col = seats[0].length;
+        int seatsTotal = row * col;
+        float totalIncome = 0.0f;
+
+        for (int i = 0; i < seats.length; i++) {
+            if (seatsTotal <= 60) {
+                totalIncome = seatsTotal * 10;
+            } else {
+                int frontHalf;
+                int backHalf;
+
+                if (row % 2 == 0) {
+                    frontHalf = row / 2;
+                    backHalf = row / 2;
+                } else {
+                    frontHalf = row / 2;
+                    backHalf = row / 2 + 1;
+                }
+
+                totalIncome = (frontHalf * col * 10) + (backHalf * col * 8);
+            }
+        }
+        return totalIncome;
     }
 }
